@@ -1,53 +1,85 @@
-import React from 'react';
-import {  Link } from "react-router-dom";
-const Navbar= () =>{
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+const Navbar = () => {
   return (
-<nav class="navbar navbar-dark bg-dark w-100"> 
- <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> */}
-   {/* <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">About</a>
-        <a class="nav-link" href="#">Pric</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </div>
-    </div>
-  </div>     */}
-  <ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/home">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="about">About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Contact Us</a>
-  </li>
-  {/* <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li> */}
-  <li>
-  <button type="button" class="btn btn-outline-primary ">
-    <Link to="/signin" activeClassName="active" className="nav-link">
-        SignIn
-    </Link>
-  </button> 
-  </li>
-  <li>
-  <button type="button" class="btn btn-outline-primary">
-  <Link to="/signup" activeClassName="active" className="nav-link">
-        SignUp
-    </Link>
-      </button>
-  </li>
-</ul>
-</div>
+    <header className="p-3 bg-dark text-white">
+      <div className="container">
+        <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a
+            href="/"
+            className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <svg
+              className="bi me-2"
+              width="40"
+              height="32"
+              role="img"
+              aria-label="Bootstrap"
+            >
+              <use xlinkHref="#bootstrap" />
+            </svg>
+          </a>
 
-  </nav>
+          <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ">
+            <li>
+              <NavLink
+                to="/signin"
+                activeClassName="active"
+                className="nav-link px-2 text-white"
+              >
+                SignIn
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/signup"
+                activeClassName="active"
+                className="nav-link px-2 text-white"
+              >
+                SignUp
+              </NavLink>
+            </li>
+            <li>
+            <NavLink
+                to="/addportfolio"
+                activeClassName="active"
+                className="nav-link px-2 text-white"
+              >
+                Add Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <a href="#" className="nav-link px-2 text-white">
+                FAQs
+              </a>
+            </li>
+            <li>
+              <a href="#" className="nav-link px-2 text-white">
+                About
+              </a>
+            </li>
+          </ul>
+
+          <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input
+              type="search"
+              className="form-control form-control-dark"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div className="text-end">
+            <button type="button" className="btn btn-outline-light me-2">
+              Login
+            </button>
+            <button type="button" className="btn btn-warning">
+              Sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
   );
-}
+};
 export default Navbar;

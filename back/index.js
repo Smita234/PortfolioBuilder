@@ -12,11 +12,11 @@ app.use(
     origin: ["http://localhost:3000"],
   })
 );
-b
+b;
 app.use(express.json());
 
 app.use("/user", userRouter);
-app.use("/portfolio",portfolioRouter );// route
+app.use("/portfolio", portfolioRouter); // route
 app.get("/", (req, res) => {
   res.send("You have requested on API");
   console.log("request at root");

@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="container p-4">
           <div className="row mt-4">
             <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4">About company</h5>
+              <h5 className="text-uppercase mb-4" style={{color:"violet"}}>About company</h5>
               <p>This is a Portfolio Building Web Application</p>
               <p>Second Line</p>
               <div className="mt-4">
@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase text-center mb-4 pb-1">
+              <h5 className="text-uppercase text-center mb-4 pb-1" style={{color:"violet"}}>
                 Contact Info
               </h5>
 
@@ -80,7 +80,7 @@ const Footer = () => {
         
 
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase text-center mb-4">Opening hours</h5>
+              <h5 className="text-uppercase text-center mb-4" style={{color:"violet"}}>Content 3</h5>
 
               <div style={{width:"100px"}}>
                 <img src="" alt=""/>

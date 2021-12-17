@@ -92,7 +92,7 @@ import GoogleIcon from "@mui/icons-material/Google";
                      className="w-100 mt-5"
                      variant="contained"
                      color="secondary"
-                     startIcon={<GoogleIcon />}
+     //                startIcon={<GoogleIcon />}
                    >
                      Register to Continue
                    </Button>

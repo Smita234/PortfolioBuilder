@@ -8,6 +8,8 @@ import Navbar from "./components/navbar";
 import Signup from "./components/signup";
 import AddPortfolio from "./components/addportfolio";
 import Footer from "./components/footer";
+import Home from "./components/home";
+import  "./App.css";
 
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
     <Routes>
       <Route element={<Signin/>} path="/signin"/>
       <Route element={<AddPortfolio/>} path="/addportfolio"/>
-      
+      <Route element={<Home/>}path="/"/>
       <Route element={<Signup/>} path="/signup"/>
     </Routes>
     <Footer/>

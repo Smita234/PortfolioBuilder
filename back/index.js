@@ -12,7 +12,7 @@ app.use(
     origin: ["http://localhost:3000"],
   })
 );
-
+b
 app.use(express.json());
 
 app.use("/user", userRouter);

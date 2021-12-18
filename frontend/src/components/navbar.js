@@ -5,7 +5,7 @@ const Navbar = () => {
     <header className="p-3 bg-success text-white">
       <div className="container">
         <div>
-          
+          <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fvisuallure.com%2Fst-louis-logo-design%2Flogo-design-portfolio%2F&psig=AOvVaw1a8ynJzpukEHHj0NJP__IX&ust=1639835111749000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNinkYH86vQCFQAAAAAdAAAAABAP" alt=""/>
         </div>
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a

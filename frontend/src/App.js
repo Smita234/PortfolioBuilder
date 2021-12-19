@@ -10,6 +10,7 @@ import AddPortfolio from "./components/addportfolio";
 import Footer from "./components/footer";
 import Home from "./components/home";
 import  "./App.css";
+import PortfolioPage from "./components/portfoliopage";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route element={<AddPortfolio/>} path="/addportfolio"/>
       <Route element={<Home/>}path="/"/>
       <Route element={<Signup/>} path="/signup"/>
+      <Route element={<PortfolioPage/>}path="/portfoliopage"/>
     </Routes>
     <Footer/>
     </BrowserRouter>

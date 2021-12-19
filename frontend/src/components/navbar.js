@@ -4,9 +4,7 @@ const Navbar = () => {
   return (
     <header className="p-3 bg-success text-white">
       <div className="container">
-        <div>
-          
-        </div>
+        <div></div>
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a
             href=""
@@ -43,12 +41,21 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-            <NavLink
+              <NavLink
                 to="/addportfolio"
                 activeClassName="active"
                 className="nav-link px-2 text-white"
               >
                 Add Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/manage"
+                activeClassName="active"
+                className="nav-link px-2 text-white"
+              >
+                Manage Portfolio
               </NavLink>
             </li>
             <li>

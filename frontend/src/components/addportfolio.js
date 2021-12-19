@@ -5,24 +5,47 @@ import GoogleIcon from "@mui/icons-material/Google";
 // //import "./signup.css";
 import app_config from "../config";
 import Swal from "sweetalert2";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../useContext";
 
 const AddPortfolio = () => {
   const url = app_config.api_url;
 
-  //   // Two important thing to use with Formik
-  //   // 1. formObject
-  const AddPortfolioForm = {
-    title: "",
-    image: "",
-    cvimage: "",
-    links: [],
-    description: "",
-    work: [],
-    user: "",
+  const [updatePortfolioForm, setUpdatePortfolioForm] = useState({});
+  const { currentUser } = useContext(UserContext);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = () => {
+    fetch(url + "/portfolio/getbyid/" + currentUser._id)
+      .then((res) => {
+        console.log(res.status);
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setUpdatePortfolioForm(data);
+        setLoading(false);
+      });
   };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  //   // Two important thing to use with Formik
+  //   // 1. formObject
+  // const updatePortfolioForm = {
+  //   title: "",
+  //   image: "",
+  //   cvimage: "",
+  //   links: [],
+  //   description: "",
+  //   work: [],
+  //   user: "",
+  // };
+
   //   // 2. submit callback function
-  const AddPortfolioSubmit = (formdata) => {
+  const PortfolioSubmit = (formdata) => {
     console.log(formdata);
 
     //     // three things are required to request
@@ -62,8 +85,8 @@ const AddPortfolio = () => {
         <Card>
           <CardContent>
             <Formik
-              initialValues={AddPortfolioForm}
-              onSubmit={AddPortfolioSubmit}
+              initialValues={updatePortfolioForm}
+              onSubmit={PortfolioSubmit}
             >
               {({ values, handleSubmit, handleChange }) => (
                 <form onSubmit={handleSubmit}>

@@ -34,10 +34,20 @@ router.delete("/delete/:userid", (req, res) => {
     });
 });
 
-router.put("/update/:userid", (req, res) => {
-  Model.findByIdAndUpdate(req.params.userid, req.body)
+router.delete("/delete/:userid", (req, res) => {
+  Model.findByIdAndDelete(req.params.userid)
     .then((data) => {
-      res.status(200).json({ message: "updated successfully!" });
+      res.status(200).json({ message: "deleted successfully!" });
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+router.get("/getbyid/:userid", (req, res) => {
+  Model.findById(req.params.userid)
+    .then((data) => {
+      res.status(200).json(data);
     })
     .catch((err) => {
       res.status(500).json(err);

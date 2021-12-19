@@ -3,11 +3,13 @@ const mongoose = require("../connection");
 const schema = mongoose.Schema({
   title: { type: String, require: true },
   image: String,
-  cvimage: String,
+  heroimage: String,
   links: Array,
   description: String,
   work:Array,
-  user: { type: mongoose.Types.ObjectId, ref: 'users' },
+  email: String,
+  username: String,
+  password: String,
   created: { type: Date, default: new Date() },
 });
 

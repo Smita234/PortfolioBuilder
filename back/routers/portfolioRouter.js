@@ -45,6 +45,7 @@ router.delete("/delete/:userid", (req, res) => {
 });
 
 router.get("/getbyid/:userid", (req, res) => {
+  console.log(req.params.userid);
   Model.findById(req.params.userid)
     .then((data) => {
       res.status(200).json(data);

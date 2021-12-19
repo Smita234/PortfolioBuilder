@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route element={<Signin />} path="/signin" />
-          <Route element={<AddPortfolio />} path="/addportfolio" />
+          <Route element={<AddPortfolio />} path="/manage" />
           <Route element={<Home />} path="/" />
           <Route element={<Signup />} path="/signup" />
           <Route element={<Portfolio />} path="/view/:id" />

@@ -13,6 +13,7 @@ const AddPortfolio = () => {
 
   const [updatePortfolioForm, setUpdatePortfolioForm] = useState({});
   const { currentUser } = useContext(UserContext);
+  console.log(currentUser);
   const [loading, setLoading] = useState(true);
 
   const fetchData = () => {
